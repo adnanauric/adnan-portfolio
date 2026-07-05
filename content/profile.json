@@ -2,10 +2,12 @@
   "name": "Adnan",
   "fullName": "Adnan",
   "tagline": "Software Engineer & AI Enthusiast",
+  "heroDescription": "I test, build, explore—and occasionally get lost on purpose.\n\nI’m a Software QA professional at BlackBerry, an Infotronics Engineering student, an AI enthusiast, and a curious traveller. I enjoy finding what breaks, building what helps, and exploring what comes next—both in technology and beyond the map.",
   "bio": [
-    "I'm a passionate developer who loves building tools that blend artificial intelligence with practical, everyday workflows. My journey spans from crafting automated trading systems to exploring the frontier of AI-assisted development.",
-    "When I'm not coding, you'll find me researching market trends, experimenting with new AI models, or diving deep into system design. I believe the best technology is the kind that empowers people to do more with less friction.",
-    "Currently focused on building AI-powered tools and systems that make complex workflows accessible to everyone."
+    "I’m an Infotronics Engineering student at Hochschule Rhein-Waal and currently work as a Software QA Working Student at BlackBerry Secusmart.",
+    "In my professional role, I contribute to software quality by testing features, identifying issues, working with test cases, and supporting reliable development processes. This experience has strengthened my attention to detail and taught me that great software is not only about how it works—but also how consistently and securely it performs.",
+    "Beyond QA, I’m deeply interested in artificial intelligence, automation, and software development. I enjoy experimenting with AI-assisted workflows, building practical projects, and continuously expanding my technical skills.",
+    "Outside technology, travelling is an important part of who I am. Discovering new places, people, and perspectives keeps me curious—and that same curiosity shapes the way I learn, solve problems, and approach my work."
   ],
   "email": "adnan@example.com",
   "resumeLink": "",

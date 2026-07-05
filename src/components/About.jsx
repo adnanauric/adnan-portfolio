@@ -4,12 +4,13 @@ import '../styles/about.css';
 
 export default function About() {
   const quickSkills = [
-    'JavaScript (ES6+)',
-    'React',
     'Python',
-    'Node.js',
     'Java',
+    'JavaScript',
+    'React',
     'Git & GitHub',
+    'Software Testing & QA',
+    'AI-assisted Development'
   ];
 
   return (
@@ -31,7 +32,7 @@ export default function About() {
             ))}
 
             <FadeInSection delay={300}>
-              <p>Here are a few technologies I've been working with recently:</p>
+              <p>Technologies and tools I’ve been working with:</p>
               <ul className="about-skills-list">
                 {quickSkills.map((skill, i) => (
                   <li key={i}>{skill}</li>

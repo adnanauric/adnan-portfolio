@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { profile } from '../data/contentLoader';
 import '../styles/hero.css';
 
-const roles = ['Software Engineer', 'AI Enthusiast', 'Problem Solver', 'Creative Builder'];
+const roles = ['Software Engineer', 'AI Enthusiast', 'Problem Solver', 'Creative Builder', 'QA Engineer @BlackBerry', 'Traveller'];
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState('');
@@ -55,8 +55,8 @@ export default function Hero() {
           <span className="typewriter-cursor"></span>
         </span>
       </h2>
-      <p className="hero-description">
-        {profile.bio[0]}
+      <p className="hero-description" style={{ whiteSpace: 'pre-wrap' }}>
+        {profile.heroDescription || profile.bio[0]}
       </p>
       <div className="hero-cta">
         <a href="#projects" className="btn-filled">
