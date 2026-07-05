@@ -64,6 +64,11 @@ export default function NavBar() {
               </a>
             </li>
           ))}
+          <li>
+            <a href="https://www.thebrokenbackpack.com/" target="_blank" rel="noopener noreferrer" className="nav-traveller-btn">
+              <span className="dot"></span> TRAVELLER BUTTON
+            </a>
+          </li>
         </ul>
 
         <button
@@ -87,6 +92,9 @@ export default function NavBar() {
             {item.label}
           </a>
         ))}
+        <a href="https://www.thebrokenbackpack.com/" target="_blank" rel="noopener noreferrer" onClick={closeMobile} className="nav-traveller-btn-mobile">
+          <span className="dot"></span> TRAVELLER BUTTON
+        </a>
       </div>
     </>
   );
