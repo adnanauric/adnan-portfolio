@@ -1,0 +1,27 @@
+import { profile } from '../data/contentLoader';
+import FadeInSection from './FadeInSection';
+import '../styles/contact.css';
+
+export default function Contact() {
+  return (
+    <section id="contact">
+      <div className="contact-section">
+        <FadeInSection>
+          <span className="contact-overline">05. What&apos;s Next?</span>
+          <h2 className="contact-heading">Get In Touch</h2>
+          <p className="contact-text">
+            I&apos;m currently looking for new opportunities and my inbox is always open.
+            Whether you have a question, a project idea, or just want to say hi —
+            I&apos;ll do my best to get back to you!
+          </p>
+          <a
+            href={`mailto:${profile.email}`}
+            className="btn-primary contact-cta"
+          >
+            Say Hello
+          </a>
+        </FadeInSection>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "name": "Languages",
+      "skills": ["JavaScript", "Python", "Java", "HTML", "CSS", "SQL"]
+    },
+    {
+      "name": "Frameworks & Libraries",
+      "skills": ["React", "Vite", "Node.js", "Bootstrap"]
+    },
+    {
+      "name": "Tools & Platforms",
+      "skills": ["Git", "GitHub", "VS Code", "Linux", "Docker"]
+    },
+    {
+      "name": "AI & Data",
+      "skills": ["LLM Integration", "Data Analysis", "Prompt Engineering", "Automation"]
+    }
+  ]
+}

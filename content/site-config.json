@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Adnan | Software Engineer & AI Enthusiast",
+    "description": "Portfolio website of Adnan — Software Engineer specializing in AI-powered tools and modern web development.",
+    "ogImage": "",
+    "favicon": ""
+  },
+  "design": {
+    "colorScheme": "dark",
+    "accentColor": "#64ffda",
+    "fontPrimary": "Inter",
+    "fontMono": "JetBrains Mono"
+  },
+  "sections": {
+    "hero": true,
+    "about": true,
+    "experience": true,
+    "projects": true,
+    "skills": true,
+    "contact": true
+  },
+  "sectionNumbers": true,
+  "scrollAnimations": true
+}

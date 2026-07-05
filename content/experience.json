@@ -1,0 +1,30 @@
+[
+  {
+    "id": "job-1",
+    "company": "Your Company",
+    "title": "Software Engineer",
+    "url": "https://example.com",
+    "startDate": "Jan 2024",
+    "endDate": "Present",
+    "description": [
+      "Developed and maintained web applications using modern JavaScript frameworks",
+      "Collaborated with cross-functional teams to deliver high-quality software solutions",
+      "Implemented automated testing pipelines reducing bug reports by 40%",
+      "Mentored junior developers and conducted code reviews"
+    ]
+  },
+  {
+    "id": "job-2",
+    "company": "Previous Company",
+    "title": "Junior Developer",
+    "url": "https://example.com",
+    "startDate": "Jun 2022",
+    "endDate": "Dec 2023",
+    "description": [
+      "Built responsive user interfaces with React and modern CSS",
+      "Worked with RESTful APIs and integrated third-party services",
+      "Participated in agile development sprints and daily standups",
+      "Contributed to internal tooling that improved team productivity"
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+/* ── Contact Section ── */
+.contact-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-section) var(--space-xl);
+}
+
+.contact-overline {
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.contact-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-xl);
+}
+
+.contact-text {
+  font-size: var(--fs-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-3xl);
+}
+
+.contact-cta {
+  display: inline-block;
+}

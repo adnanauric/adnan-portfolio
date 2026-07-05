@@ -1,0 +1,18 @@
+{
+  "name": "Adnan",
+  "fullName": "Adnan",
+  "tagline": "Software Engineer & AI Enthusiast",
+  "bio": [
+    "I'm a passionate developer who loves building tools that blend artificial intelligence with practical, everyday workflows. My journey spans from crafting automated trading systems to exploring the frontier of AI-assisted development.",
+    "When I'm not coding, you'll find me researching market trends, experimenting with new AI models, or diving deep into system design. I believe the best technology is the kind that empowers people to do more with less friction.",
+    "Currently focused on building AI-powered tools and systems that make complex workflows accessible to everyone."
+  ],
+  "email": "adnan@example.com",
+  "resumeLink": "",
+  "social": {
+    "github": "https://github.com/adnanauric",
+    "linkedin": "https://www.linkedin.com/in/md-adnan-abir/",
+    "twitter": ""
+  },
+  "location": "Germany"
+}

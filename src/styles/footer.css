@@ -1,0 +1,128 @@
+/* ── Footer ── */
+.footer {
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  list-style: none;
+}
+
+.footer-social a {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-xl);
+  transition: var(--transition-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.footer-social a:hover {
+  color: var(--color-accent);
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.footer-credit {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.footer-credit a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: var(--transition-default);
+}
+
+.footer-credit a:hover {
+  color: var(--color-accent);
+}
+
+/* ── Fixed Side Elements ── */
+.side-element {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+
+.side-element-left {
+  left: 40px;
+}
+
+.side-element-right {
+  right: 40px;
+}
+
+.side-social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.side-social-list::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: var(--color-text-secondary);
+}
+
+.side-social-list a {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-xl);
+  transition: var(--transition-default);
+  padding: 8px;
+}
+
+.side-social-list a:hover {
+  color: var(--color-accent);
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.side-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.side-email::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  background: var(--color-text-secondary);
+}
+
+.side-email a {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  letter-spacing: 1.5px;
+  transition: var(--transition-default);
+}
+
+.side-email a:hover {
+  color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1080px) {
+  .side-element {
+    display: none;
+  }
+}

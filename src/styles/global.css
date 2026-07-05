@@ -1,0 +1,291 @@
+/* ============================================
+   GLOBAL DESIGN SYSTEM — Adnan's Portfolio
+   ============================================
+   All design tokens and base styles.
+   Edit content/site-config.json to change colors.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  /* Background Colors */
+  --color-bg-primary: #0a192f;
+  --color-bg-secondary: #112240;
+  --color-bg-tertiary: #233554;
+
+  /* Text Colors */
+  --color-text-primary: #ccd6f6;
+  --color-text-secondary: #8892b0;
+  --color-text-bright: #e6f1ff;
+  --color-text-heading: #ccd6f6;
+
+  /* Accent */
+  --color-accent: #64ffda;
+  --color-accent-tint: rgba(100, 255, 218, 0.1);
+  --color-accent-hover: rgba(100, 255, 218, 0.07);
+
+  /* Gradients */
+  --gradient-accent: linear-gradient(135deg, #64ffda 0%, #48c9b0 100%);
+  --gradient-hero: linear-gradient(180deg, #0a192f 0%, #0d2137 50%, #112240 100%);
+  --gradient-card: linear-gradient(135deg, rgba(17, 34, 64, 0.8) 0%, rgba(10, 25, 47, 0.9) 100%);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 2rem;
+  --fs-4xl: 2.5rem;
+  --fs-hero: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-hero-sub: clamp(1rem, 2vw, 1.25rem);
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.1;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-section: clamp(80px, 12vh, 140px);
+
+  /* Layout */
+  --max-width: 1100px;
+  --nav-height: 70px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+
+  /* Transitions */
+  --transition-fast: all 0.15s ease;
+  --transition-default: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-slow: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(2, 12, 27, 0.3);
+  --shadow-md: 0 4px 20px rgba(2, 12, 27, 0.4);
+  --shadow-lg: 0 10px 40px rgba(2, 12, 27, 0.5);
+  --shadow-accent: 0 0 20px rgba(100, 255, 218, 0.15);
+
+  /* Glass Effect */
+  --glass-bg: rgba(10, 25, 47, 0.85);
+  --glass-border: rgba(100, 255, 218, 0.1);
+  --glass-blur: blur(12px);
+}
+
+/* ── CSS Reset & Base ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-accent-tint);
+  color: var(--color-accent);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-heading);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition-default);
+}
+
+a:hover {
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+p {
+  margin-bottom: var(--space-md);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Utility Classes ── */
+.section-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-section) var(--space-xl);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+.section-heading .section-number {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-regular);
+  color: var(--color-accent);
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 1px;
+  background-color: var(--color-bg-tertiary);
+}
+
+.accent-text {
+  color: var(--color-accent);
+}
+
+.mono-text {
+  font-family: var(--font-mono);
+}
+
+/* ── Button Styles ── */
+.btn-primary {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-default);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-tint);
+  opacity: 1;
+}
+
+.btn-filled {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-bg-primary);
+  background: var(--gradient-accent);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-default);
+  text-decoration: none;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.5px;
+}
+
+.btn-filled:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-accent);
+  opacity: 1;
+}
+
+/* ── Tech Pill Tags ── */
+.tech-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-accent);
+  background-color: var(--color-accent-tint);
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ── Fade In Animation ── */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: var(--space-3xl) var(--space-lg);
+  }
+
+  .section-heading {
+    font-size: var(--fs-2xl);
+  }
+
+  .section-heading::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-wrapper {
+    padding: var(--space-2xl) var(--space-md);
+  }
+}

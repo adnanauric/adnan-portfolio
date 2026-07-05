@@ -1,0 +1,50 @@
+{
+  "featured": [
+    {
+      "id": "project-1",
+      "title": "AI Swing Trading Desk",
+      "description": "A serverless AI-assisted swing trading system that acts as a quantitative analyst and risk manager. Scans for high-probability setups, calculates risk parameters, and maintains a rigorous performance ledger — all through natural language commands.",
+      "tech": ["Python", "AI/LLM", "Markdown", "Data Analysis"],
+      "github": "https://github.com/adnan/ai-swing-desk",
+      "live": "",
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": "project-2",
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website built with React and Vite. Features a content-data separation architecture where all content lives in JSON files, making it fully AI-manageable through natural language commands.",
+      "tech": ["React", "Vite", "CSS", "GitHub Pages"],
+      "github": "https://github.com/adnan/portfolio",
+      "live": "",
+      "image": "",
+      "featured": true
+    }
+  ],
+  "other": [
+    {
+      "id": "project-3",
+      "title": "SDET Workspace",
+      "description": "Software Development Engineer in Test workspace with automation frameworks and testing utilities.",
+      "tech": ["Java", "Selenium", "Testing"],
+      "github": "",
+      "live": ""
+    },
+    {
+      "id": "project-4",
+      "title": "Visual Life",
+      "description": "A creative visual project exploring design and multimedia content creation.",
+      "tech": ["Design", "Creative"],
+      "github": "",
+      "live": ""
+    },
+    {
+      "id": "project-5",
+      "title": "Blogger Template Builder",
+      "description": "Custom template builder for Blogger platform with modern design patterns.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "github": "",
+      "live": ""
+    }
+  ]
+}

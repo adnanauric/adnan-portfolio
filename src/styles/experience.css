@@ -1,0 +1,133 @@
+/* ── Experience Section ── */
+.experience-content {
+  display: flex;
+  gap: var(--space-2xl);
+  min-height: 320px;
+}
+
+/* ── Tab List (Company Selector) ── */
+.experience-tabs {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 200px;
+}
+
+.experience-tab-btn {
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  border-left: 2px solid var(--color-bg-tertiary);
+  cursor: pointer;
+  transition: var(--transition-default);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.experience-tab-btn:hover {
+  color: var(--color-accent);
+  background: var(--color-accent-hover);
+}
+
+.experience-tab-btn.active {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+  background: var(--color-accent-hover);
+}
+
+/* ── Tab Panel (Job Details) ── */
+.experience-panel {
+  flex: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+.experience-panel-title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-xs);
+}
+
+.experience-panel-title .company-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  position: relative;
+}
+
+.experience-panel-title .company-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: var(--transition-default);
+}
+
+.experience-panel-title .company-link:hover::after {
+  width: 100%;
+}
+
+.experience-panel-dates {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.experience-panel-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.experience-panel-list li {
+  display: flex;
+  gap: var(--space-md);
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-normal);
+}
+
+.experience-panel-list li::before {
+  content: '▹';
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .experience-content {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .experience-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    min-width: unset;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .experience-tab-btn {
+    border-left: none;
+    border-bottom: 2px solid var(--color-bg-tertiary);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .experience-tab-btn.active {
+    border-left: none;
+    border-bottom-color: var(--color-accent);
+  }
+}
