@@ -49,12 +49,6 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div className="side-element side-element-right">
-        <div className="side-email">
-          <a href={`mailto:${profile.email}`}>{profile.email}</a>
-        </div>
-      </div>
-
       {/* Footer */}
       <footer className="footer">
         <div className="footer-credit">
