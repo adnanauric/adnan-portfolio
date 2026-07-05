@@ -1,40 +1,35 @@
-# Adnan's Personal Portfolio
+# Adnan Abir 🚀
 
-Welcome to the source code of my personal portfolio website. This repository serves not just as a host for my projects and experience, but as a demonstration of my approach to modern frontend architecture and clean design.
+[![Live Site](https://img.shields.io/badge/Website-adnanabir.com-64ffda?style=for-the-badge&logoColor=black)](https://adnanabir.com)
 
-**Live Site:** *(coming soon)*
+Welcome to the repository for my personal portfolio website!
 
----
-
-## 💡 Why This Project Standouts
-
-When building my portfolio, I wanted to create something that went beyond a standard static site. I engineered this project to be highly maintainable, extremely fast, and visually striking without relying on heavy UI frameworks.
-
-### 1. Content-Data Separation Architecture
-Instead of hardcoding text into React components, the entire site is driven by a centralized JSON data layer. 
-- **The Result:** The UI components act purely as view layers. If I need to add a new project or update my bio, I simply edit a JSON file. The UI dynamically re-renders without ever touching a `.jsx` file. This pattern makes the site incredibly scalable and easy to manage.
-
-### 2. Bespoke Vanilla Design System
-Rather than importing massive component libraries like Tailwind or Bootstrap, I built a custom, modular design system using native CSS variables.
-- **The Result:** The site achieves a premium, modern aesthetic—featuring glassmorphism, dynamic gradients, and precise micro-animations—with zero bloat. The dark navy palette is carefully crafted to be easy on the eyes while maintaining high contrast.
-
-### 3. Performance First
-The site utilizes the native `IntersectionObserver` API for smooth, scroll-reveal animations. 
-- **The Result:** Animations are handled efficiently without bogging down the main JavaScript thread, ensuring the site feels snappy and responsive on all devices.
+I test, build, explore—and occasionally get lost on purpose. I’m currently a **Software QA Working Student at BlackBerry Secusmart** and an **Infotronics Engineering student** at Hochschule Rhein-Waal. 
 
 ---
 
-## 🛠️ Technology Stack
+## 👨‍💻 About Me
 
-- **Core:** React 18
-- **Build Tool:** Vite (for lightning-fast HMR and optimized production bundling)
-- **Styling:** Vanilla CSS (Modular Custom Properties)
-- **Deployment:** GitHub Actions / GitHub Pages
+In my professional role, I contribute to software quality by testing features, identifying issues, working with test cases, and supporting reliable development processes. This experience has strengthened my attention to detail and taught me that great software is not only about how it works—but also how consistently and securely it performs.
 
----
+Beyond QA, I’m deeply interested in artificial intelligence, automation, and software development. I enjoy experimenting with AI-assisted workflows, building practical projects, and continuously expanding my technical skills.
+
+Outside technology, travelling is an important part of who I am. Discovering new places, people, and perspectives keeps me curious—and that same curiosity shapes the way I learn, solve problems, and approach my work.
+
+## 🛠️ What I Built Here
+
+This repository contains the source code for [adnanabir.com](https://adnanabir.com). I designed and engineered it from scratch to be a reflection of my approach to clean architecture and modern design:
+
+- **Data-Driven:** The site uses a content-data separation architecture. All content lives in a centralized JSON layer, making it infinitely scalable and easy to manage without touching React components.
+- **Bespoke Design:** Built with a custom vanilla CSS design system—no heavy UI frameworks—featuring glassmorphism, dynamic gradients, and smooth scroll animations.
+- **Tech Stack:** React 18, Vite, and native CSS.
 
 ## 📫 Let's Connect
 
-I'm always open to discussing new opportunities, exploring AI-assisted workflows, or just talking about tech. 
+I'm always open to discussing new opportunities, exploring AI-assisted workflows, software quality assurance, or just talking about tech.
 
-Feel free to check out my [Projects](#) on the live site, or reach out to me directly!
+- **Website:** [adnanabir.com](https://adnanabir.com)
+- **GitHub:** [@adnanauric](https://github.com/adnanauric)
+- **LinkedIn:** [MD Adnan Abir](https://www.linkedin.com/in/md-adnan-abir/)
+
+Feel free to check out my projects on my live site, or reach out to me directly!
