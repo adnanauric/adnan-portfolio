@@ -3,10 +3,10 @@ import FadeInSection from './FadeInSection';
 import '../styles/skills.css';
 
 const categoryIcons = {
-  'Languages': '&#x1F4BB;',
+  'QA & Product Quality': '&#x1F9EA;',
+  'Programming & Development': '&#x1F4BB;',
   'Frameworks & Libraries': '&#x2699;',
-  'Tools & Platforms': '&#x1F6E0;',
-  'AI & Data': '&#x1F916;',
+  'Tools, AI & Automation': '&#x1F916;',
 };
 
 export default function Skills() {

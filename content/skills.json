@@ -1,20 +1,52 @@
 {
   "categories": [
     {
-      "name": "Languages",
-      "skills": ["JavaScript", "Python", "Java", "HTML", "CSS", "SQL"]
+      "name": "QA & Product Quality",
+      "skills": [
+        "Test Execution",
+        "Test Case Design",
+        "Release Readiness",
+        "Defect Validation",
+        "Feature Evaluation",
+        "Cross-Team Collaboration"
+      ]
+    },
+    {
+      "name": "Programming & Development",
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SQL"
+      ]
     },
     {
       "name": "Frameworks & Libraries",
-      "skills": ["React", "Vite", "Node.js", "Bootstrap"]
+      "skills": [
+        "OpenCV",
+        "Streamlit",
+        "Pandas",
+        "Matplotlib",
+        "Tkinter",
+        "React",
+        "Vite"
+      ]
     },
     {
-      "name": "Tools & Platforms",
-      "skills": ["Git", "GitHub", "VS Code", "Linux", "Docker"]
-    },
-    {
-      "name": "AI & Data",
-      "skills": ["LLM Integration", "Data Analysis", "Prompt Engineering", "Automation"]
+      "name": "Tools, AI & Automation",
+      "skills": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Linux",
+        "Docker",
+        "LLM Integration",
+        "Prompt Engineering",
+        "Data Analysis",
+        "Computer Vision"
+      ]
     }
   ]
 }
