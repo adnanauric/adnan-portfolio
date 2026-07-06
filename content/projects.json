@@ -2,22 +2,34 @@
   "featured": [
     {
       "id": "project-1",
-      "title": "AI Swing Trading Desk",
-      "description": "A serverless AI-assisted swing trading system that acts as a quantitative analyst and risk manager. Scans for high-probability setups, calculates risk parameters, and maintains a rigorous performance ledger — all through natural language commands.",
-      "tech": ["Python", "AI/LLM", "Markdown", "Data Analysis"],
-      "github": "https://github.com/adnan/ai-swing-desk",
+      "title": "ParkVision - Real Time Parking Occupancy Monitor",
+      "description": "A computer-vision parking system built with OpenCV and Streamlit to detect free and occupied parking spaces from live or recorded video. It processes each frame using grayscale conversion, Gaussian blur, adaptive thresholding, and pixel-density analysis, then presents the results through an interactive real-time dashboard. The project also simulates vehicle arrivals and departures to visualize occupancy patterns over time.",
+      "tech": [
+        "Python",
+        "OpenCV",
+        "Streamlit",
+        "Computer Vision",
+        "Simulation"
+      ],
+      "github": "https://github.com/adnanauric/Real-Time_Vehicle_Occupancy_Monitoring",
       "live": "",
-      "image": "",
+      "image": "/images/ParkVision.png",
       "featured": true
     },
     {
       "id": "project-2",
-      "title": "Portfolio Website",
-      "description": "A modern, responsive portfolio website built with React and Vite. Features a content-data separation architecture where all content lives in JSON files, making it fully AI-manageable through natural language commands.",
-      "tech": ["React", "Vite", "CSS", "GitHub Pages"],
-      "github": "https://github.com/adnan/portfolio",
+      "title": "Expense Pilot - Personal Finance Dashboard",
+      "description": "A desktop finance management application built with Python that helps users track income, expenses, and savings through an intuitive graphical interface. It automatically calculates balances and monthly summaries, organizes transactions by category, and transforms financial data into clear line graphs and pie charts. The application also supports savings transfers and stores data locally in CSV format for privacy and continuity.",
+      "tech": [
+        "Python",
+        "Tkinter",
+        "Pandas",
+        "Matplotlib",
+        "Data Visualization"
+      ],
+      "github": "https://github.com/adnanauric/Expense-Pilot",
       "live": "",
-      "image": "",
+      "image": "/images/ExpensePilot.png",
       "featured": true
     }
   ],
@@ -26,24 +38,38 @@
       "id": "project-3",
       "title": "SDET Workspace",
       "description": "Software Development Engineer in Test workspace with automation frameworks and testing utilities.",
-      "tech": ["Java", "Selenium", "Testing"],
+      "tech": [
+        "Java",
+        "Selenium",
+        "Testing"
+      ],
       "github": "",
       "live": ""
     },
     {
       "id": "project-4",
-      "title": "Visual Life",
-      "description": "A creative visual project exploring design and multimedia content creation.",
-      "tech": ["Design", "Creative"],
+      "title": "AI Swing Trading Desk",
+      "description": "A serverless AI-assisted swing trading system that acts as a quantitative analyst and risk manager. Scans for high-probability setups, calculates risk parameters, and maintains a rigorous performance ledger — all through natural language commands.",
+      "tech": [
+        "Python",
+        "AI/LLM",
+        "Markdown",
+        "Data Analysis"
+      ],
       "github": "",
       "live": ""
     },
     {
       "id": "project-5",
-      "title": "Blogger Template Builder",
-      "description": "Custom template builder for Blogger platform with modern design patterns.",
-      "tech": ["HTML", "CSS", "JavaScript"],
-      "github": "",
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website built with React and Vite. Features a content-data separation architecture where all content lives in JSON files, making it fully AI-manageable through natural language commands.",
+      "tech": [
+        "React",
+        "Vite",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "github": "https://github.com/adnanauric/adnan-portfolio",
       "live": ""
     }
   ]
