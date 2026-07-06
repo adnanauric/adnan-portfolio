@@ -8,11 +8,9 @@ export default function Contact() {
       <div className="contact-section">
         <FadeInSection>
           <span className="contact-overline">05. What&apos;s Next?</span>
-          <h2 className="contact-heading">Get In Touch</h2>
+          <h2 className="contact-heading">{profile.contactHeading || "Get In Touch"}</h2>
           <p className="contact-text">
-            I&apos;m currently looking for new opportunities and my inbox is always open.
-            Whether you have a question, a project idea, or just want to say hi —
-            I&apos;ll do my best to get back to you!
+            {profile.contactText || "I'm currently looking for new opportunities and my inbox is always open. Whether you have a question, a project idea, or just want to say hi — I'll do my best to get back to you!"}
           </p>
           <a
             href={`mailto:${profile.email}`}
