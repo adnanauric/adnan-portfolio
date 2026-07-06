@@ -1,30 +1,32 @@
 [
   {
     "id": "job-1",
-    "company": "Your Company",
-    "title": "Software Engineer",
+    "company": "BlackBerry",
+    "title": "Software QA Working Student",
     "url": "https://example.com",
-    "startDate": "Jan 2024",
+    "startDate": "March 2025",
     "endDate": "Present",
     "description": [
-      "Developed and maintained web applications using modern JavaScript frameworks",
-      "Collaborated with cross-functional teams to deliver high-quality software solutions",
-      "Implemented automated testing pipelines reducing bug reports by 40%",
-      "Mentored junior developers and conducted code reviews"
+      "Execute structured test runs and support release-readiness activities to ensure stable, reliable, and high-quality software.",
+      "Collaborate closely with developers to reproduce defects, assess risks, validate fixes, and strengthen overall product quality.",
+      "Contribute to R&D initiatives by evaluating new features, identifying improvement opportunities, and providing quality-focused feedback throughout development.",
+      "Create and maintain test cases, test runs, QA documentation, and internal wiki content for consistent and traceable testing.",
+      "Contribute to internal company projects while continuously improving QA workflows, test coverage, and team processes.",
+      "Train and support new working students in testing tools, quality standards, and established QA practices."
     ]
   },
   {
     "id": "job-2",
-    "company": "Previous Company",
-    "title": "Junior Developer",
+    "company": "Personal Projects",
+    "title": "Independent Projects & Continuous Learning",
     "url": "https://example.com",
-    "startDate": "Jun 2022",
-    "endDate": "Dec 2023",
+    "startDate": "Since Curiosity Kicked In",
+    "endDate": "Ongoing",
     "description": [
-      "Built responsive user interfaces with React and modern CSS",
-      "Worked with RESTful APIs and integrated third-party services",
-      "Participated in agile development sprints and daily standups",
-      "Contributed to internal tooling that improved team productivity"
+      "Turned curiosity into personal projects, prototypes, scripts, and experiments—usually starting with, “What happens if I try this?”",
+      "Explored software, AI, automation, and product ideas by building them, breaking them, and rebuilding them better.",
+      "Developed a natural QA mindset long before the job title: questioning assumptions, finding edge cases, and spotting opportunities for improvement.",
+      "Collected practical skills, failed experiments, and countless debugging lessons—the unofficial experience that prepared me for the official role."
     ]
   }
 ]
