@@ -125,15 +125,18 @@
   right: 0;
   width: min(75vw, 400px);
   height: 100vh;
+  height: 100dvh;
   background: var(--color-bg-secondary);
-  padding: 100px var(--space-3xl);
+  padding: 80px var(--space-3xl) 40px;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2xl);
+  justify-content: center;
+  gap: var(--space-xl);
   z-index: 999;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   transform: translateX(100%);
   visibility: hidden;
+  overflow-y: auto;
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1),
               visibility 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
