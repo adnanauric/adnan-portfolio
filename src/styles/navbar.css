@@ -90,32 +90,49 @@
 /* ── Mobile Menu ── */
 .nav-hamburger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
+  position: relative;
+  width: 28px;
+  height: 16px;
   cursor: pointer;
   z-index: 1001;
   background: none;
   border: none;
-  padding: 4px;
+  padding: 0;
 }
 
 .nav-hamburger span {
   display: block;
+  position: absolute;
+  left: 0;
   width: 28px;
   height: 2px;
   background-color: var(--color-accent);
-  transition: var(--transition-default);
   border-radius: 2px;
+  transform-origin: center;
+  transition: var(--transition-default);
+}
+
+.nav-hamburger span:nth-child(1) {
+  top: 0;
+}
+.nav-hamburger span:nth-child(2) {
+  top: 7px;
+}
+.nav-hamburger span:nth-child(3) {
+  top: 14px;
 }
 
 .nav-hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  top: 7px;
+  transform: rotate(45deg);
 }
 .nav-hamburger.active span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-10px);
 }
 .nav-hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  top: 7px;
+  transform: rotate(-45deg);
 }
 
 .nav-mobile-menu {
@@ -196,7 +213,7 @@
   }
 
   .nav-hamburger {
-    display: flex;
+    display: block;
   }
 }
 
