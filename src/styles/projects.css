@@ -149,6 +149,10 @@
   gap: var(--space-lg);
 }
 
+.other-projects-grid > .fade-in-section {
+  height: 100%;
+}
+
 .other-project-card {
   background: var(--color-bg-secondary);
   border-radius: var(--border-radius-md);
@@ -161,6 +165,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .other-project-card::before {
@@ -223,11 +228,53 @@
   color: var(--color-accent);
 }
 
+
+.other-project-card-desc-wrapper {
+  position: relative;
+}
+
 .other-project-card-desc {
   font-size: var(--fs-md);
   color: var(--color-text-secondary);
   line-height: var(--lh-normal);
-  flex: 1;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.other-project-card-desc.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.other-project-card-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(to bottom, transparent, var(--color-bg-secondary));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.other-project-card-toggle {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  cursor: pointer;
+  padding: 0;
+  margin-top: 4px;
+  transition: var(--transition-default);
+  opacity: 0.8;
+}
+
+.other-project-card-toggle:hover {
+  opacity: 1;
 }
 
 .other-project-card-tech {

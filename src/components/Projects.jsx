@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import { projects } from '../data/contentLoader';
 import FadeInSection from './FadeInSection';
 import '../styles/projects.css';
@@ -72,8 +73,19 @@ function FeaturedProject({ project, index }) {
 }
 
 function OtherProjectCard({ project }) {
+  const [expanded, setExpanded] = useState(false);
+  const descRef = useRef(null);
+  const [needsToggle, setNeedsToggle] = useState(false);
+
+  useEffect(() => {
+    if (descRef.current) {
+      // Check if the text overflows the clamped height (3 lines)
+      setNeedsToggle(descRef.current.scrollHeight > descRef.current.clientHeight + 1);
+    }
+  }, [project.description]);
+
   return (
-    <div className="other-project-card">
+    <div className={`other-project-card ${expanded ? 'expanded' : ''}`}>
       <div className="other-project-card-header">
         <span className="other-project-card-folder">&#x1F4C1;</span>
         <div className="other-project-card-links">
@@ -90,7 +102,24 @@ function OtherProjectCard({ project }) {
         </div>
       </div>
       <h3 className="other-project-card-title">{project.title}</h3>
-      <p className="other-project-card-desc">{project.description}</p>
+      <div className="other-project-card-desc-wrapper">
+        <p
+          ref={descRef}
+          className={`other-project-card-desc ${expanded ? 'expanded' : ''}`}
+        >
+          {project.description}
+        </p>
+        {needsToggle && !expanded && <div className="other-project-card-fade" />}
+        {needsToggle && (
+          <button
+            className="other-project-card-toggle"
+            onClick={() => setExpanded(!expanded)}
+            aria-label={expanded ? 'Show less' : 'Show more'}
+          >
+            {expanded ? '− show less' : '+ read more'}
+          </button>
+        )}
+      </div>
       <ul className="other-project-card-tech">
         {project.tech.map((tech, i) => (
           <li key={i}>{tech}</li>
