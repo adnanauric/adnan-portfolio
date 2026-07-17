@@ -3,7 +3,7 @@
     "id": "job-1",
     "company": "BlackBerry",
     "title": "Software QA Working Student",
-    "url": "https://example.com",
+    "url": "https://www.blackberry.com/",
     "startDate": "March 2025",
     "endDate": "Present",
     "description": [
@@ -19,7 +19,7 @@
     "id": "job-2",
     "company": "Personal Projects",
     "title": "Independent Projects & Continuous Learning",
-    "url": "https://example.com",
+    "url": "https://github.com/adnanauric",
     "startDate": "Since Curiosity Kicked In",
     "endDate": "Ongoing",
     "description": [
