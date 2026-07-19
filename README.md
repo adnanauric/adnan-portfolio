@@ -30,6 +30,6 @@ I'm always open to discussing new opportunities, exploring AI-assisted workflows
 
 - **Website:** [adnanabir.com](https://adnanabir.com)
 - **GitHub:** [@adnanauric](https://github.com/adnanauric)
-- **LinkedIn:** [MD Adnan Abir](https://www.linkedin.com/in/md-adnan-abir/)
+- **LinkedIn:** [Adnan Abir](https://www.linkedin.com/in/md-adnan-abir/)
 
 Feel free to check out my projects on my live site, or reach out to me directly!
