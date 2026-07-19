@@ -1,8 +1,9 @@
-import { profile } from '../data/contentLoader';
+import { config, profile } from '../data/contentLoader';
 import FadeInSection from './FadeInSection';
 import '../styles/about.css';
 
 export default function About() {
+  const heading = config.sectionHeadings.about;
   const quickSkills = [
     'Python',
     'Java',
@@ -18,8 +19,8 @@ export default function About() {
       <div className="section-wrapper">
         <FadeInSection>
           <h2 className="section-heading">
-            <span className="section-number">01.</span>
-            About Me
+            <span className="section-number">{heading.number}.</span>
+            {heading.title}
           </h2>
         </FadeInSection>
 

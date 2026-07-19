@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { projects } from '../data/contentLoader';
+import { config, projects } from '../data/contentLoader';
 import FadeInSection from './FadeInSection';
 import '../styles/projects.css';
 
@@ -130,13 +130,15 @@ function OtherProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const heading = config.sectionHeadings.projects;
+
   return (
     <section id="projects">
       <div className="section-wrapper">
         <FadeInSection>
           <h2 className="section-heading">
-            <span className="section-number">03.</span>
-            Things I&apos;ve Built
+            <span className="section-number">{heading.number}.</span>
+            {heading.title}
           </h2>
         </FadeInSection>
 

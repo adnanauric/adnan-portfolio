@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
+import { config } from '../data/contentLoader';
 import '../styles/navbar.css';
 
-const navItems = [
-  { num: '01', label: 'About', href: '#about' },
-  { num: '02', label: 'Experience', href: '#experience' },
-  { num: '03', label: 'Projects', href: '#projects' },
-  { num: '04', label: 'Skills', href: '#skills' },
-  { num: '05', label: 'Contact', href: '#contact' },
-];
+const navItems = config.navigation;
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,9 +52,9 @@ export default function NavBar() {
 
         <ul className="nav-links">
           {navItems.map((item) => (
-            <li key={item.num}>
+            <li key={item.number}>
               <a href={item.href}>
-                <span className="nav-number">{item.num}.</span>
+                <span className="nav-number">{item.number}.</span>
                 {item.label}
               </a>
             </li>
@@ -87,8 +82,8 @@ export default function NavBar() {
       <div className={`nav-mobile-overlay ${mobileOpen ? 'open' : ''}`} onClick={closeMobile}></div>
       <div className={`nav-mobile-menu ${mobileOpen ? 'open' : ''}`} id="nav-mobile-menu">
         {navItems.map((item) => (
-          <a key={item.num} href={item.href} onClick={closeMobile}>
-            <span className="nav-number">{item.num}.</span>
+          <a key={item.number} href={item.href} onClick={closeMobile}>
+            <span className="nav-number">{item.number}.</span>
             {item.label}
           </a>
         ))}

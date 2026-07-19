@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import { experience } from '../data/contentLoader';
+import { config, experience } from '../data/contentLoader';
 import FadeInSection from './FadeInSection';
 import '../styles/experience.css';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState(0);
+  const heading = config.sectionHeadings.experience;
 
   return (
     <section id="experience">
       <div className="section-wrapper">
         <FadeInSection>
           <h2 className="section-heading">
-            <span className="section-number">02.</span>
-            Where I&apos;ve Worked
+            <span className="section-number">{heading.number}.</span>
+            {heading.title}
           </h2>
         </FadeInSection>
 

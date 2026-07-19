@@ -1,0 +1,34 @@
+{
+  "education": [
+    {
+      "id": "rhine-waal-infotronic-systems-engineering",
+      "institution": "Rhine-Waal University of Applied Sciences",
+      "institutionShort": "HSRW",
+      "institutionUrl": "https://www.hochschule-rhein-waal.de/en/faculties/communication-and-environment/degree-programmes/bachelor-degree-programmes/infotronic",
+      "degree": "Bachelor of Science (B.Sc.)",
+      "field": "Infotronic Systems Engineering",
+      "startDate": "Aug 2023",
+      "endDate": "Present",
+      "location": "Kamp-Lintfort, Germany",
+      "status": "Currently enrolled",
+      "description": "An interdisciplinary engineering programme at Rhine-Waal University of Applied Sciences that connects computer science, software development, data processing, electrical engineering, signal processing, and intelligent systems. Through a strong mix of theory, practical labs, and project-based work, the programme builds a broad technical foundation from embedded hardware and networks to modern software systems, automation, data analysis, and AI-driven applications. It develops the ability to understand complete systems, work across hardware and software layers, and approach technical challenges with an engineering, research, and product-quality mindset.",
+      "focusLabel": "Core curriculum",
+      "focusAreas": [
+        "Computer Science",
+        "Object-Oriented Programming",
+        "Software Engineering",
+        "Computer Architecture",
+        "Computer Networks",
+        "Embedded Systems",
+        "Data Science",
+        "Electrical Engineering",
+        "Signals & Systems",
+        "Distributed Systems",
+        "Scientific Programming",
+        "Interdisciplinary Projects"
+      ],
+      "programmeLinkLabel": "Explore the official programme"
+    }
+  ],
+  "certifications": []
+}

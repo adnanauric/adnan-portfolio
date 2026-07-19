@@ -1,4 +1,4 @@
-import { skills } from '../data/contentLoader';
+import { config, skills } from '../data/contentLoader';
 import FadeInSection from './FadeInSection';
 import '../styles/skills.css';
 
@@ -10,13 +10,15 @@ const categoryIcons = {
 };
 
 export default function Skills() {
+  const heading = config.sectionHeadings.skills;
+
   return (
     <section id="skills">
       <div className="section-wrapper">
         <FadeInSection>
           <h2 className="section-heading">
-            <span className="section-number">04.</span>
-            Skills & Technologies
+            <span className="section-number">{heading.number}.</span>
+            {heading.title}
           </h2>
         </FadeInSection>
 
