@@ -99,8 +99,7 @@ svg {
 .nav-social:hover { color: white; background: var(--blue); border-color: var(--blue); transform: translateY(-2px); }
 .nav-social:not(.nav-travel) svg { width: 16px; height: 16px; fill: currentColor; stroke: none; }
 .nav-travel { position: relative; width: 52px; border-radius: 100px; color: var(--ink); background: var(--lime); border-color: rgba(19,39,31,.14); }
-.nav-travel::after { position: absolute; top: 7px; right: 8px; content: '↗'; font-size: 8px; font-weight: 900; }
-.nav-travel svg { width: 19px; height: 19px; margin-left: -4px; fill: none; stroke: currentColor; }
+.nav-travel svg { width: 19px; height: 19px; fill: none; stroke: currentColor; }
 .nav-travel:hover { color: white; background: var(--coral); border-color: var(--coral); transform: rotate(-2deg) translateY(-2px); }
 
 .site-header.is-scrolled .site-nav { gap: 13px; }
@@ -438,7 +437,6 @@ svg {
 .quote-mark { position: absolute; top: 13px; left: 23px; color: var(--lime); font-family: Georgia, serif; font-size: 55px; line-height: 1; }
 .about-quote > p { margin: 0; font-family: Georgia, serif; font-size: clamp(19px, 1.65vw, 25px); line-height: 1.18; }
 .quote-credit { display: flex; align-items: center; gap: 8px; margin-top: 15px; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.quote-credit span { color: var(--lime); }
 
 .about-copy > p { margin: 0 0 24px; color: var(--ink-soft); font-size: 17px; line-height: 1.78; }
 

@@ -182,7 +182,7 @@ function About() {
           <figcaption className="about-quote">
             <span className="quote-mark" aria-hidden="true">“</span>
             <p>I enjoy finding what breaks, building what helps, and exploring what comes next.</p>
-            <div className="quote-credit">Adnan Abir <span>↗</span></div>
+            <div className="quote-credit">Adnan Abir</div>
           </figcaption>
         </figure>
         <div className="about-copy" data-reveal>
