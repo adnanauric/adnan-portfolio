@@ -1,1 +1,5 @@
-/* index.css is intentionally empty — all base styles are in src/styles/global.css */
+#root { min-height: 100vh; }
+
+img, video { display: block; max-width: 100%; }
+
+button, input, textarea, select { font: inherit; }
