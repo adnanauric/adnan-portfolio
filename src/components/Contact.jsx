@@ -15,7 +15,7 @@ export default function Contact() {
             {profile.contactText || "I'm currently looking for new opportunities and my inbox is always open. Whether you have a question, a project idea, or just want to say hi — I'll do my best to get back to you!"}
           </p>
           <a
-            href={`mailto:${profile.email}`}
+            href="#contact-form"
             className="btn-primary contact-cta"
           >
             Say Hello

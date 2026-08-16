@@ -129,7 +129,7 @@ function Hero() {
         <p className="hero-manifesto">I build, test &amp; explore what’s next</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#experience">Explore my work <Arrow /></a>
-          <a className="button button-ghost" href={`mailto:${profile.email}`}>Say hello <Arrow diagonal /></a>
+          <a className="button button-ghost" href="#contact">Say hello <Arrow diagonal /></a>
         </div>
       </div>
 
@@ -339,17 +339,113 @@ function Skills() {
 }
 
 function Contact() {
+  const [formStatus, setFormStatus] = useState({ type: 'idle', message: '' });
+  const isSending = formStatus.type === 'sending';
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setFormStatus({ type: 'sending', message: 'Sending your message…' });
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error('Submission failed');
+      }
+
+      form.reset();
+      setFormStatus({
+        type: 'success',
+        message: 'Thank you — your message has been sent successfully.',
+      });
+    } catch {
+      setFormStatus({
+        type: 'error',
+        message: 'Your message could not be sent. Please try again in a moment.',
+      });
+    }
+  };
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-orbit orbit-one" aria-hidden="true" />
       <div className="contact-orbit orbit-two" aria-hidden="true" />
       <div className="contact-content" data-reveal>
-        <p className="eyebrow">06 / Contact</p>
-        <h2>Contact <em>Me</em></h2>
-        <p>{profile.contactText}</p>
-        <a className="contact-email" href={`mailto:${profile.email}`}>
-          Say hello <Arrow diagonal />
-        </a>
+        <div className="contact-heading">
+          <p className="eyebrow">06 / Contact</p>
+          <h2>Contact <em>Me</em></h2>
+          <p>{profile.contactText}</p>
+        </div>
+
+        <div className="contact-panel">
+          <aside className="contact-note">
+            <span className="contact-note-label">Open to conversations</span>
+            <h3>Let’s discuss quality, software, AI, or collaboration</h3>
+            <p>Share a little context and I’ll reply directly to the email address you provide.</p>
+            <ul aria-label="Conversation topics">
+              <li>Quality engineering</li>
+              <li>Software projects</li>
+              <li>AI &amp; automation</li>
+            </ul>
+          </aside>
+
+          <form
+            id="contact-form"
+            className="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            onSubmit={handleSubmit}
+            aria-busy={isSending}
+          >
+            <input type="hidden" name="access_key" value="390d5222-da05-4d3b-b96a-6df19abd5154" />
+            <input type="hidden" name="from_name" value="Adnan Abir Portfolio" />
+            <input className="form-botcheck" type="checkbox" name="botcheck" tabIndex="-1" autoComplete="off" />
+
+            <div className="contact-form-row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" autoComplete="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" autoComplete="email" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="What would you like to discuss?" required />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="6" placeholder="Tell me about your idea, project, or question" required />
+            </label>
+
+            <div className="contact-form-footer">
+              <p>Your details are used only to respond to your message.</p>
+              <button className="contact-submit" type="submit" disabled={isSending}>
+                <span>{isSending ? 'Sending…' : 'Send message'}</span>
+                <Arrow diagonal />
+              </button>
+            </div>
+
+            <p
+              className={`contact-status is-${formStatus.type}`}
+              role={formStatus.type === 'error' ? 'alert' : 'status'}
+              aria-live="polite"
+            >
+              {formStatus.message}
+            </p>
+          </form>
+        </div>
       </div>
       <footer>
         <p>Built and designed by <strong>Adnan Abir</strong> · All rights reserved. ©</p>
