@@ -17,9 +17,15 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
   color: var(--ink);
   background: var(--paper);
@@ -28,6 +34,12 @@ body {
 }
 
 body.menu-open { overflow: hidden; }
+
+@supports (overflow: clip) {
+  html,
+  body,
+  #root { overflow-x: clip; }
+}
 
 ::selection { color: var(--ink); background: var(--lime); }
 
@@ -89,6 +101,8 @@ svg {
 .site-header.is-scrolled .brand-word { font-size: 25px; }
 
 .site-nav { display: flex; align-items: center; gap: clamp(14px, 1.8vw, 25px); }
+.mobile-nav,
+.menu-backdrop { display: none; }
 .nav-pages { display: flex; align-items: center; gap: clamp(14px, 1.65vw, 24px); }
 .nav-pages > a { position: relative; font-size: 12px; font-weight: 700; text-decoration: none; }
 .nav-pages > a::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 1px; content: ''; background: var(--ink); transform: scaleX(0); transform-origin: right; transition: transform 220ms ease; }
@@ -112,7 +126,7 @@ svg {
 
 .hero {
   position: relative;
-  min-height: min(900px, 100svh);
+  min-height: max(760px, 100svh);
   overflow: hidden;
   color: white;
   background: #1872c9;
@@ -678,23 +692,63 @@ footer > p strong { color: rgba(255,255,255,.86); font-weight: 700; }
   .site-header.is-scrolled { top: 8px; width: min(620px, calc(100vw - 28px)); height: 56px; padding: 6px 7px 6px 17px; }
   .brand-word { font-size: 27px; }
   .site-header.is-scrolled .brand-word { font-size: 24px; }
-  .site-nav {
+  .site-header { z-index: 220; }
+  .desktop-nav { display: none; }
+  .mobile-nav {
     position: fixed;
+    z-index: 210;
     top: 0;
-    right: -20px;
-    width: min(420px, calc(100vw + 20px));
-    height: 100svh;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: min(420px, 100vw);
+    height: 100dvh;
+    min-height: 100svh;
     padding: 110px 40px 45px;
+    overflow-y: auto;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 0;
     color: white;
     background: var(--ink);
-    transform: translateX(105%);
-    transition: transform 350ms cubic-bezier(.22,.75,.28,1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(100%, 0, 0);
+    visibility: hidden;
+    overscroll-behavior: contain;
+    transition:
+      transform 350ms cubic-bezier(.22,.75,.28,1),
+      opacity 260ms ease,
+      visibility 0s linear 350ms;
   }
-  .site-nav.is-open { transform: translateX(0); }
+  .mobile-nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  .menu-backdrop {
+    position: fixed;
+    z-index: 200;
+    inset: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: rgba(6, 20, 15, .34);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    backdrop-filter: blur(3px);
+    transition: opacity 260ms ease, visibility 0s linear 350ms;
+  }
+  .menu-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition-delay: 0s;
+  }
   .nav-pages { width: 100%; flex-direction: column; align-items: flex-start; gap: 0; }
   .nav-pages > a,
   .site-header.is-scrolled .nav-pages > a { width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.15); color: white; font-size: 26px; font-weight: 500; letter-spacing: -.03em; }
@@ -780,8 +834,10 @@ footer > p strong { color: rgba(255,255,255,.86); font-weight: 700; }
   .project-archive { margin-top: 80px; }
   .archive-heading { display: block; }
   .archive-heading h3 { margin-top: 12px; }
-  .archive-list article { grid-template-columns: 32px 1fr 36px; gap: 12px; }
+  .archive-list article { grid-template-columns: 32px minmax(0, 1fr) max-content; gap: 12px; }
   .archive-list article ul { display: none; }
+  .archive-list article > div { min-width: 0; }
+  .archive-list article > i { justify-self: end; white-space: nowrap; }
   .archive-list h4 { font-size: 16px; }
   .archive-list p { font-size: 12px; }
   .education-card { grid-template-columns: 1fr; gap: 24px; padding: 28px 22px; }

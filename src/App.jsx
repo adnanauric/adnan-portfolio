@@ -51,7 +51,23 @@ function Header() {
 
   useEffect(() => {
     document.body.classList.toggle('menu-open', open);
-    return () => document.body.classList.remove('menu-open');
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+    const desktopBreakpoint = window.matchMedia('(min-width: 981px)');
+    const closeOnDesktop = (event) => {
+      if (event.matches) setOpen(false);
+    };
+
+    window.addEventListener('keydown', closeOnEscape);
+    desktopBreakpoint.addEventListener('change', closeOnDesktop);
+
+    return () => {
+      document.body.classList.remove('menu-open');
+      window.removeEventListener('keydown', closeOnEscape);
+      desktopBreakpoint.removeEventListener('change', closeOnDesktop);
+    };
   }, [open]);
 
   useEffect(() => {
@@ -63,42 +79,68 @@ function Header() {
 
   const close = () => setOpen(false);
 
-  return (
-    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#top" onClick={close} aria-label="Adnan — home">
-        <span className="brand-word"><em>A</em>dnan</span>
-      </a>
+  const navigation = (
+    <>
+      <div className="nav-pages">
+        {config.navigation.map((item) => (
+          <a href={item.href} onClick={close} key={item.number}>{item.label}</a>
+        ))}
+      </div>
+      <div className="nav-socials" aria-label="Social and personal links">
+        <a className="nav-social" href={profile.social.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+          <GitHubIcon />
+        </a>
+        <a className="nav-social" href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <LinkedInIcon />
+        </a>
+        <a className="nav-social nav-travel" href="https://www.thebrokenbackpack.com/" target="_blank" rel="noreferrer" aria-label="The Broken Backpack travel blog" title="Travel blog — The Broken Backpack">
+          <TravelIcon />
+        </a>
+      </div>
+    </>
+  );
 
-      <nav className={`site-nav ${open ? 'is-open' : ''}`} aria-label="Main navigation">
-        <div className="nav-pages">
-          {config.navigation.map((item) => (
-            <a href={item.href} onClick={close} key={item.number}>{item.label}</a>
-          ))}
-        </div>
-        <div className="nav-socials" aria-label="Social and personal links">
-          <a className="nav-social" href={profile.social.github} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
-            <GitHubIcon />
-          </a>
-          <a className="nav-social" href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
-            <LinkedInIcon />
-          </a>
-          <a className="nav-social nav-travel" href="https://www.thebrokenbackpack.com/" target="_blank" rel="noreferrer" aria-label="The Broken Backpack travel blog" title="Travel blog — The Broken Backpack">
-            <TravelIcon />
-          </a>
-        </div>
-      </nav>
+  return (
+    <>
+      <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
+        <a className="brand" href="#top" onClick={close} aria-label="Adnan — home">
+          <span className="brand-word"><em>A</em>dnan</span>
+        </a>
+
+        <nav className="site-nav desktop-nav" aria-label="Main navigation">
+          {navigation}
+        </nav>
+
+        <button
+          className={`menu-button ${open ? 'is-open' : ''}`}
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          aria-controls="mobile-navigation"
+          aria-expanded={open}
+          aria-label={open ? 'Close navigation' : 'Open navigation'}
+        >
+          <span />
+          <span />
+        </button>
+      </header>
 
       <button
-        className={`menu-button ${open ? 'is-open' : ''}`}
+        className={`menu-backdrop ${open ? 'is-open' : ''}`}
         type="button"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open}
-        aria-label={open ? 'Close navigation' : 'Open navigation'}
+        onClick={close}
+        aria-label="Close navigation"
+        tabIndex={open ? 0 : -1}
+      />
+
+      <nav
+        className={`site-nav mobile-nav ${open ? 'is-open' : ''}`}
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+        aria-hidden={!open}
       >
-        <span />
-        <span />
-      </button>
-    </header>
+        {navigation}
+      </nav>
+    </>
   );
 }
 
