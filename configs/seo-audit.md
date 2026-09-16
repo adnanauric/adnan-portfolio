@@ -6,7 +6,7 @@ Alternate names: **Md Adnan Abir**, **adnanauric**
 
 ## Changes and their purpose
 
-- Replaced the old generic title with **Adnan Abir | Software QA, Automation & Applied AI**. The description identifies a Software QA professional in Germany and explicitly frames automation/API testing as developing skills. Author metadata uses the full public name.
+- Replaced the old generic title with **Adnan Abir | Software QA, Automation & Applied AI**. The owner-approved description is: “Adnan Abir is a Software QA professional in Germany focused on software testing, quality engineering, automation, backend/API testing, Python and practical applied AI.” Author metadata uses the full public name. The Person description retains the distinction between current QA work and developing automation skills.
 - Added a single canonical homepage, consistent Open Graph metadata, Twitter/X metadata, and index/follow directives. Metadata is generated from the content files in development and production so it does not drift between templates.
 - Added one JSON-LD graph containing Person, WebSite, ProfilePage and Blog. Stable entity IDs connect the portfolio and The Broken Backpack to the same person. The full/legal name is an alternateName, not repeated visible text.
 - Job title remains **Software QA Working Student**. Secusmart is the employer and BlackBerry its parent organization, as confirmed by the owner. Current enrollment uses university affiliation, not an alumni/graduation claim. The existing university URL and actual GitHub/LinkedIn URLs are retained. No employer URL, credential, seniority or AI job title was invented.
@@ -18,6 +18,26 @@ Alternate names: **Md Adnan Abir**, **adnanauric**
 - Updated repository author/identity documentation and added production SEO validation to the existing build/deploy command. Removed the stale content-validator requirement for a public email address.
 
 The existing portrait is used for Open Graph and a Twitter **summary** card. It is a professional portrait, not a landscape banner; no new crop, generated artwork, X username or visual asset was introduced.
+
+## Maintenance notes
+
+Keep the public README focused on Adnan’s portfolio, background, projects and contact links. SEO implementation, alternate-name strategy, role-positioning decisions and audit details belong in this document.
+
+The public name is Adnan Abir, the alternate/legal name is Md Adnan Abir and the GitHub username is adnanauric. Structured data connects these identities. The current formal role is Software QA Working Student; automation and backend/API testing describe developing areas, not a separate current job title.
+
+```sh
+npm ci
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
+
+`npm run build` generates the client assets, prerenders the homepage and validates the delivered SEO markup. `npm run check:seo` validates an existing build. The same React page is rendered to static HTML and then hydrated for navigation and contact interactions; no server runtime is needed on GitHub Pages.
+
+Metadata is maintained in `content/site-config.json`; identity and public profiles are in `content/profile.json`. `scripts/seo.js` generates the title, canonical, social metadata and JSON-LD graph from those files. The description is shared by the standard meta description, Open Graph, Twitter/X and ProfilePage structured data. `public/robots.txt` and `public/sitemap.xml` are copied into the deployment; the sitemap contains only the canonical homepage, not section fragments.
+
+See [deployment instructions](deployment.md) for publishing. This document is tracked in the repository; moving notes out of the README does not make them private.
 
 ## Validation
 
@@ -75,7 +95,7 @@ These improvements clarify identity and make the page easier to crawl. They do n
 
 ## Files changed
 
-- `README.md` — public identity and technical documentation.
+- `README.md` — public portfolio introduction, background and contact links.
 - `configs/deployment.md` — redirect/canonical behavior and deployment checks.
 - `configs/seo-audit.md` — this audit, evidence, limitations and handoff.
 - `content/profile.json` — accurate machine-readable identity and relationships.
