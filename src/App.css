@@ -202,14 +202,15 @@ svg {
   text-transform: uppercase;
 }
 
-.identity-copy strong {
+.identity-copy h1 {
+  margin: 0;
   font-size: 27px;
   font-weight: 600;
   letter-spacing: -.035em;
   line-height: 1.1;
 }
 
-.hero h1, .section-intro h2, .contact-content h2 {
+.hero .hero-heading, .section-intro h2, .contact-content h2 {
   margin: 0;
   font-size: clamp(58px, 7.2vw, 112px);
   font-weight: 500;
@@ -217,7 +218,7 @@ svg {
   line-height: .92;
 }
 
-.hero h1 { max-width: 1080px; margin-top: 28px; font-size: clamp(58px, 6.1vw, 92px); text-shadow: 0 4px 28px rgba(6,31,43,.3); }
+.hero .hero-heading { max-width: 1080px; margin-top: 28px; font-size: clamp(58px, 6.1vw, 92px); text-shadow: 0 4px 28px rgba(6,31,43,.3); }
 
 .hero-title-role,
 .hero-title-study { display: block; }
@@ -234,13 +235,13 @@ svg {
   line-height: .96;
 }
 
-.hero h1 em, .section-intro h2 em, .contact-content h2 em {
+.hero .hero-heading em, .section-intro h2 em, .contact-content h2 em {
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 400;
   letter-spacing: -.055em;
 }
 
-.hero h1 em { color: var(--lime); }
+.hero .hero-heading em { color: var(--lime); }
 
 .hero-content > p {
   max-width: 550px;
@@ -766,7 +767,7 @@ footer > p strong { color: rgba(255,255,255,.86); font-weight: 700; }
   .hero { min-height: 820px; }
   .hero-video { object-position: 60% center; }
   .hero-content { padding-top: 190px; }
-  .hero h1 { font-size: clamp(52px, 8.5vw, 78px); }
+  .hero .hero-heading { font-size: clamp(52px, 8.5vw, 78px); }
   .section-intro { grid-template-columns: 1fr; gap: 30px; }
   .section-intro h2, .section-intro .section-copy { grid-column: 1; }
   .section-intro h2 { max-width: 750px; }
@@ -799,8 +800,8 @@ footer > p strong { color: rgba(255,255,255,.86); font-weight: 700; }
   .identity-monogram { width: 52px; height: 52px; }
   .identity-monogram img { width: 28px; height: 28px; }
   .identity-copy { min-width: 0; }
-  .identity-copy strong { font-size: 23px; }
-  .hero h1 { margin-top: 22px; font-size: clamp(42px, 12vw, 54px); line-height: .94; }
+  .identity-copy h1 { font-size: 23px; }
+  .hero .hero-heading { margin-top: 22px; font-size: clamp(42px, 12vw, 54px); line-height: .94; }
   .hero-title-study { margin-top: .12em; font-size: .71em; line-height: 1.03; }
   .hero-content > p { max-width: 360px; margin-top: 22px; font-size: 15px; }
   .hero-content > .hero-manifesto { gap: 11px; font-size: 15px; }

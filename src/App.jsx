@@ -93,7 +93,7 @@ function Header() {
         <a className="nav-social" href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
           <LinkedInIcon />
         </a>
-        <a className="nav-social nav-travel" href="https://www.thebrokenbackpack.com/" target="_blank" rel="noreferrer" aria-label="The Broken Backpack travel blog" title="Travel blog — The Broken Backpack">
+        <a className="nav-social nav-travel" href={profile.travelBlog} target="_blank" rel="noreferrer" aria-label="The Broken Backpack — Adnan Abir’s travel blog" title="Travel blog — The Broken Backpack">
           <TravelIcon />
         </a>
       </div>
@@ -103,7 +103,7 @@ function Header() {
   return (
     <>
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-        <a className="brand" href="#top" onClick={close} aria-label="Adnan — home">
+        <a className="brand" href="/#top" onClick={close} aria-label="Adnan Abir — home">
           <span className="brand-word"><em>A</em>dnan</span>
         </a>
 
@@ -146,8 +146,8 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="hero" id="top" aria-labelledby="hero-title">
-      <video className="hero-video" autoPlay muted loop playsInline poster="/images/hero-poster.jpg">
+    <section className="hero" id="top" aria-labelledby="profile-name">
+      <video className="hero-video" autoPlay muted loop playsInline poster="/images/hero-poster.jpg" aria-hidden="true">
         <source src="/video/hero.webm" type="video/webm" />
         <source src="/video/hero.mp4" type="video/mp4" />
       </video>
@@ -157,17 +157,17 @@ function Hero() {
       <div className="hero-content">
         <div className="hero-identity" aria-label={`Portfolio of ${profile.fullName}`}>
           <span className="identity-monogram" aria-hidden="true">
-            <img src="/images/monogram.png" alt="" />
+            <img src="/images/monogram.png" alt="" width="1280" height="1280" />
           </span>
-          <span className="identity-copy">
+          <div className="identity-copy">
             <small>Portfolio of</small>
-            <strong>{profile.fullName}</strong>
-          </span>
+            <h1 id="profile-name">{profile.fullName}</h1>
+          </div>
         </div>
-        <h1 id="hero-title">
+        <h2 className="hero-heading" id="hero-title">
           <span className="hero-title-role">Software <span className="hero-title-accent">QA</span> Engineer</span>
           <span className="hero-title-study">&amp; <em>Infotronic Systems</em><br />Engineering Student</span>
-        </h1>
+        </h2>
         <p className="hero-manifesto">I build, test &amp; explore what’s next</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#experience">Explore my work <Arrow /></a>
@@ -272,7 +272,7 @@ function FeaturedProject({ project, index }) {
   return (
     <article className={`project-card project-${index + 1}`} data-reveal>
       <div className="project-visual">
-        <img src={project.image} alt={`Screenshot of ${project.title}`} loading="lazy" />
+        <img src={project.image} alt={project.imageAlt} loading="lazy" />
         <span>0{index + 1}</span>
       </div>
       <div className="project-content">
@@ -281,7 +281,7 @@ function FeaturedProject({ project, index }) {
         <p>{project.description}</p>
         <ul>{project.tech.map((item) => <li key={item}>{item}</li>)}</ul>
         {project.github && (
-          <a className="project-link" href={project.github} target="_blank" rel="noreferrer">
+          <a className="project-link" href={project.github} target="_blank" rel="noreferrer" aria-label={`View the source for ${project.title}`}>
             View the source <Arrow diagonal />
           </a>
         )}
@@ -448,7 +448,7 @@ function Contact() {
           >
             <input type="hidden" name="access_key" value="390d5222-da05-4d3b-b96a-6df19abd5154" />
             <input type="hidden" name="from_name" value="Adnan Abir Portfolio" />
-            <input className="form-botcheck" type="checkbox" name="botcheck" tabIndex="-1" autoComplete="off" />
+            <input className="form-botcheck" type="checkbox" name="botcheck" tabIndex="-1" autoComplete="off" aria-hidden="true" />
 
             <div className="contact-form-row">
               <label>

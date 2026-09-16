@@ -41,7 +41,7 @@ if (profile) {
   check(profile.name, 'profile.json: has "name"');
   check(profile.tagline, 'profile.json: has "tagline"');
   check(Array.isArray(profile.bio) && profile.bio.length > 0, 'profile.json: has "bio" array with content');
-  check(profile.email, 'profile.json: has "email"');
+  check(profile.fullName, 'profile.json: has public full name');
   check(profile.social && profile.social.github, 'profile.json: has GitHub social link');
 }
 

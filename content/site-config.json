@@ -1,9 +1,13 @@
 {
   "meta": {
-    "title": "Adnan | Software Engineer & AI Enthusiast",
-    "description": "Portfolio website of Adnan — Software Engineer specializing in Quality Assurance, AI & Automation, and modern development.",
-    "ogImage": "",
-    "favicon": ""
+    "title": "Adnan Abir | Software QA, Automation & Applied AI",
+    "description": "Adnan Abir is a Software QA professional in Germany, developing skills in automation, Python and backend/API testing, with practical applied AI experience.",
+    "canonical": "https://adnanabir.com/",
+    "ogImage": "https://adnanabir.com/images/adnan-abir-portrait.jpg",
+    "ogImageAlt": "Portrait of Adnan Abir",
+    "ogImageWidth": 1306,
+    "ogImageHeight": 1741,
+    "favicon": "/favicon.png"
   },
   "design": {
     "colorScheme": "dark",

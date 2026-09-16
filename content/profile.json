@@ -1,7 +1,25 @@
 {
   "name": "Adnan",
   "fullName": "Adnan Abir",
-  "tagline": "Software Engineer & AI Enthusiast",
+  "tagline": "Software QA | Automation & Applied AI | Traveler",
+  "alternateName": ["Md Adnan Abir", "adnanauric"],
+  "jobTitle": "Software QA Working Student",
+  "employer": "Secusmart",
+  "employerParent": { "name": "BlackBerry", "url": "https://www.blackberry.com/" },
+  "travelBlog": "https://www.thebrokenbackpack.com/",
+  "seoDescription": "Adnan Abir is a Software QA Working Student at Secusmart in Germany and an Infotronic Systems Engineering student at Hochschule Rhein-Waal. His work focuses on manual and functional testing, release validation and QA documentation. He is developing automation and API testing skills, practices applied AI, and runs the travel blog The Broken Backpack.",
+  "knowsAbout": [
+    "Software Quality Assurance",
+    "Manual and Functional Testing",
+    "Release Validation and Test Management",
+    "Test Automation",
+    "Backend and API Testing",
+    "Python",
+    "Applied Artificial Intelligence",
+    "Large Language Models",
+    "AI-Assisted Engineering and QA",
+    "Privacy-Aware Local AI Workflows"
+  ],
   "heroDescription": "I test, build, explore—and occasionally get lost on purpose.\n\nI enjoy finding what breaks, building what helps, and exploring what comes next—both in technology and beyond the map.",
   "bio": [
     "I’m an Infotronics Engineering student at Hochschule Rhein-Waal and currently work as a Software QA Working Student at BlackBerry.",

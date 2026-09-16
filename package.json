@@ -3,9 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Adnan Abir",
+  "description": "Personal portfolio of Adnan Abir — Software QA, Automation & Applied AI",
+  "homepage": "https://adnanabir.com/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.js && node scripts/validate-seo.js",
+    "check:seo": "node scripts/validate-seo.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },

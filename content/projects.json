@@ -14,6 +14,7 @@
       "github": "https://github.com/adnanauric/Real-Time_Vehicle_Occupancy_Monitoring",
       "live": "",
       "image": "/images/ParkVision.png",
+      "imageAlt": "ParkVision parking occupancy view with green outlines for free spaces and red outlines for occupied spaces",
       "featured": true
     },
     {
@@ -30,6 +31,7 @@
       "github": "https://github.com/adnanauric/Expense-Pilot",
       "live": "",
       "image": "/images/ExpensePilot.png",
+      "imageAlt": "Expense Pilot dashboard showing balances, a transaction list and expense charts",
       "featured": true
     }
   ],
