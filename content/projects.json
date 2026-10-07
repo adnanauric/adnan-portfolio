@@ -1,6 +1,17 @@
 {
   "featured": [
     {
+      "id": "ai-meeting-assistant",
+      "title": "AI Meeting Assistant - Secure Local AI Workspace",
+      "description": "An AI-powered meeting productivity application that transforms raw transcripts into structured action items by identifying tasks, assignees, deadlines, priorities, and uncertain information for review. Built around locally running LLMs through Ollama or LM Studio, it keeps meeting data on-device while providing editable task workflows, model selection, structured AI-response validation, and multi-format exports. The application combines a modern React + TypeScript architecture with automated testing across core AI, data, and interface workflows.",
+      "tech": ["React", "TypeScript", "Local LLM", "AI Integration", "Automated Testing"],
+      "github": "https://github.com/adnanauric/Ai_meeting_assistant",
+      "live": "",
+      "image": "/images/ai-meeting-assistant.webp",
+      "imageAlt": "AI Meeting Assistant workspace with a meeting transcript and extracted action items organized by task, assignee, deadline, priority and review status",
+      "featured": true
+    },
+    {
       "id": "project-1",
       "title": "ParkVision - Real Time Parking Occupancy Monitor",
       "description": "A computer-vision parking system built with OpenCV and Streamlit to detect free and occupied parking spaces from live or recorded video. It processes each frame using grayscale conversion, Gaussian blur, adaptive thresholding, and pixel-density analysis, then presents the results through an interactive real-time dashboard. The project also simulates vehicle arrivals and departures to visualize occupancy patterns over time.",
@@ -63,15 +74,15 @@
     },
     {
       "id": "project-5",
-      "title": "Portfolio Website",
-      "description": "A modern, responsive portfolio website built with React and Vite. Features a content-data separation architecture where all content lives in JSON files, making it fully AI-manageable through natural language commands.",
+      "title": "AI Journal Assistant",
+      "description": "A personal AI companion that organizes daily reflections, tracks recurring patterns, and turns everyday thoughts into useful insights.",
       "tech": [
-        "React",
-        "Vite",
-        "CSS",
-        "GitHub Pages"
+        "AI/LLM",
+        "Markdown",
+        "Automation",
+        "Analytics"
       ],
-      "github": "https://github.com/adnanauric/adnan-portfolio",
+      "github": "",
       "live": ""
     }
   ]

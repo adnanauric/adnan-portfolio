@@ -273,10 +273,10 @@ function FeaturedProject({ project, index }) {
     <article className={`project-card project-${index + 1}`} data-reveal>
       <div className="project-visual">
         <img src={project.image} alt={project.imageAlt} loading="lazy" />
-        <span>0{index + 1}</span>
+        <span>{String(index + 1).padStart(2, '0')}</span>
       </div>
       <div className="project-content">
-        <p className="eyebrow">Featured build / 0{index + 1}</p>
+        <p className="eyebrow">Featured build / {String(index + 1).padStart(2, '0')}</p>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
         <ul>{project.tech.map((item) => <li key={item}>{item}</li>)}</ul>
@@ -310,7 +310,7 @@ function Projects() {
         <div className="archive-list">
           {projects.other.map((project, index) => (
             <article key={project.id}>
-              <span>0{index + 3}</span>
+              <span>{String(projects.featured.length + index + 1).padStart(2, '0')}</span>
               <div><h4>{project.title}</h4><p>{project.description}</p></div>
               <ul>{project.tech.map((item) => <li key={item}>{item}</li>)}</ul>
               {project.github ? (

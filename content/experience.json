@@ -17,16 +17,16 @@
   },
   {
     "id": "job-2",
-    "company": "Personal Projects",
-    "title": "Independent Projects & Continuous Learning",
-    "url": "https://github.com/adnanauric",
-    "startDate": "Since Curiosity Kicked In",
-    "endDate": "Ongoing",
+    "company": "Rhine-Waal University · Usability Lab",
+    "title": "Project Manager,\nAI/XR Product Development",
+    "url": "https://www.hochschule-rhein-waal.de/en/faculty-of-communication-and-environment/research-and-laboratories/laboratories/usability-lab",
+    "startDate": "April 2026",
+    "endDate": "September 2026",
     "description": [
-      "Turned curiosity into personal projects, prototypes, scripts, and experiments—usually starting with, “What happens if I try this?”",
-      "Explored software, AI, automation, and product ideas by building them, breaking them, and rebuilding them better.",
-      "Developed a natural QA mindset long before the job title: questioning assumptions, finding edge cases, and spotting opportunities for improvement.",
-      "Collected practical skills, failed experiments, and countless debugging lessons—the unofficial experience that prepared me for the official role."
+      "Led a multidisciplinary project developing an AI-powered, VR-based German learning system, coordinating work across AI, XR, UI/UX, sensing, human factors, and evaluation teams.",
+      "Managed project planning, cross-team dependencies, requirements alignment, progress tracking, communication, and final delivery across multiple specialized workstreams.",
+      "Translated user research and human-factor findings into actionable product requirements while helping technical teams align their individual components into one integrated system.",
+      "Coordinated project-wide documentation, deliverables, issue resolution, and final submissions, helping drive the project from early concept to a functioning executable prototype."
     ]
   }
 ]
