@@ -127,30 +127,7 @@
     });
   }
 
-  /* ── 3. One-Click Share / Copy Link ── */
-  if (shareBtn) {
-    shareBtn.addEventListener('click', async () => {
-      const url = window.location.href;
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: 'Adnan Abir — Portfolio & Travel Blog',
-            text: 'Explore Adnan Abir’s Engineering Portfolio & The Broken Backpack Travel Blog:',
-            url
-          });
-          return;
-        } catch (_) {
-          // Fallback to clipboard copy
-        }
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).catch(() => {});
-      }
-      showToast('✨ Link copied to clipboard!');
-    });
-  }
-
-  /* ── 4. Keyboard Shortcuts ([1] Portfolio, [2] Travel Blog) ── */
+  /* ── 3. Keyboard Shortcuts ([1] Portfolio, [2] Travel Blog) ── */
   window.addEventListener('keydown', (e) => {
     if (e.key === '1' && cardEng) {
       cardEng.focus();
