@@ -777,10 +777,32 @@ body[data-hover="traveler"] .portal-card.side-trv .spin-on-hover {
 /* ==========================================================================
    5. RESPONSIVE (Mobile & Tablet)
    ========================================================================== */
+@keyframes mobileCardComeToTop {
+  0% {
+    opacity: 0.45;
+    transform: translateY(18px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1);
+  }
+}
+
 @media (max-width: 820px) {
   .portal-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  /* Bring the active side's card to the top on mobile when switched */
+  body[data-hover="engineer"] .portal-card.side-eng {
+    order: -1;
+    animation: mobileCardComeToTop 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  body[data-hover="traveler"] .portal-card.side-trv {
+    order: -1;
+    animation: mobileCardComeToTop 0.36s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .gateway-shell {
