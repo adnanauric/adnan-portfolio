@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="daylight">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adnan Abir — Choose a World | Portfolio &amp; Travel Blog</title>
+  <meta name="description" content="Explore both worlds of Adnan Abir: Software QA, Automation &amp; Applied AI Portfolio (adnanabir.com) and The Broken Backpack Travel Blog (thebrokenbackpack.com)." />
+  <link rel="canonical" href="https://adnanabir.com/lobby" />
+  <link rel="icon" type="image/svg+xml" href="/lobby/assets/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="/lobby/assets/favicon.png" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adnanabir.com/lobby" />
+  <meta property="og:title" content="Adnan Abir — Which side of me are you here to explore today?" />
+  <meta property="og:description" content="Pick a door: Software QA &amp; Applied AI Portfolio (adnanabir.com) or The Broken Backpack Travel Blog (thebrokenbackpack.com)." />
+  <meta property="og:image" content="https://adnanabir.com/images/adnan-abir-portrait.jpg" />
+
+  <link rel="stylesheet" href="/lobby/styles.css" />
+</head>
+<body>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <div class="gateway-shell">
+    <!-- ==================================================================
+         1. MINIMAL TOP BAR
+         ================================================================== -->
+    <header class="top-bar">
+      <div class="brand-id">
+        <span class="brand-logo" aria-hidden="true">
+          <img src="/lobby/assets/monogram.png" alt="" width="20" height="20" />
+        </span>
+        <span class="brand-name">Adnan Abir</span>
+        <span class="location-tag">
+          <span class="live-dot" aria-hidden="true"></span>
+          Germany
+        </span>
+      </div>
+
+      <div class="top-actions">
+        <button class="mini-btn" id="theme-btn" type="button" aria-label="Toggle light and dark theme">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-text">Night</span>
+        </button>
+        <button class="mini-btn" id="share-btn" type="button" aria-label="Copy page link">
+          <span>🔗</span>
+          <span>Share Link</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================================================================
+         2. CENTER STAGE: GAMIFIED CHARACTER + HEADER + 2 PORTAL CARDS
+         ================================================================== -->
+    <main class="center-stage">
+      <div class="intro-header">
+        <!-- Interactive Gamified Character of Adnan -->
+        <div class="character-stage">
+          <div
+            class="character-frame"
+            id="character-frame"
+            role="button"
+            tabindex="0"
+            aria-label="Gamified character of Adnan Abir. Hover a card or tap to switch character outfit."
+            title="Tap to switch Adnan's character class!"
+          >
+            <svg class="character-svg" viewBox="0 0 120 124" aria-hidden="true">
+              <!-- Neutral Dual Sparkles (Default State) -->
+              <g class="gear-neutral">
+                <path d="M18 32 L21 26 L24 32 L30 35 L24 38 L21 44 L18 38 L12 35 Z" fill="#126fe8" />
+                <path d="M98 30 L100 25 L102 30 L107 32 L102 34 L100 39 L98 34 L93 32 Z" fill="#f26444" />
+              </g>
+
+              <!-- Back of Explorer Hat Rim (Traveler State) -->
+              <g class="gear-traveler">
+                <ellipse cx="60" cy="30" rx="42" ry="10" fill="#eab308" stroke="#13271f" stroke-width="2.4" />
+              </g>
+
+              <!-- Torso & Overshirt (Morphs Blue <-> Coral) -->
+              <path
+                class="char-jacket"
+                d="M24 118 C24 92, 40 84, 60 84 C80 84, 96 92, 96 118 Z"
+                stroke="#13271f"
+                stroke-width="2.6"
+                stroke-linejoin="round"
+              />
+              <!-- Inner Dark Tee & White Collar (Like Adnan's real outfit) -->
+              <polygon points="48,85 60,118 72,85" fill="#13271f" />
+              <polygon points="45,84 53,95 57,86" fill="#fffdf8" stroke="#13271f" stroke-width="2" stroke-linejoin="round" />
+              <polygon points="75,84 67,95 63,86" fill="#fffdf8" stroke="#13271f" stroke-width="2" stroke-linejoin="round" />
+
+              <!-- TRAVELER GEAR ON TORSO: Backpack Straps & Vintage Camera -->
+              <g class="gear-traveler">
+                <!-- Backpack Straps -->
+                <path d="M35 88 L39 118" stroke="#9a3412" stroke-width="6.5" stroke-linecap="round" />
+                <path d="M35 88 L39 118" stroke="#ffbe3b" stroke-width="3.5" stroke-linecap="round" />
+                <path d="M85 88 L81 118" stroke="#9a3412" stroke-width="6.5" stroke-linecap="round" />
+                <path d="M85 88 L81 118" stroke="#ffbe3b" stroke-width="3.5" stroke-linecap="round" />
+                <!-- Camera Strap & Camera -->
+                <path d="M47 87 L53 106 M73 87 L67 106" stroke="#13271f" stroke-width="2" />
+                <rect x="49" y="102" width="22" height="15" rx="3.5" fill="#fffdf8" stroke="#13271f" stroke-width="2.2" />
+                <circle cx="60" cy="109.5" r="4.5" fill="#f26444" stroke="#13271f" stroke-width="1.8" />
+              </g>
+
+              <!-- ENGINEER GEAR ON TORSO: QA ID Badge & Terminal Pin -->
+              <g class="gear-engineer">
+                <rect x="66" y="96" width="16" height="12" rx="2.5" fill="#d9f776" stroke="#13271f" stroke-width="1.8" />
+                <text x="68.5" y="104.5" fill="#13271f" font-family="JetBrains Mono, monospace" font-size="6.5" font-weight="800">QA</text>
+              </g>
+
+              <!-- Neck -->
+              <rect x="53" y="74" width="14" height="14" rx="5" fill="#d8976c" stroke="#13271f" stroke-width="2.4" />
+
+              <!-- Ears -->
+              <circle cx="35" cy="56" r="5.5" fill="#d8976c" stroke="#13271f" stroke-width="2.4" />
+              <circle cx="85" cy="56" r="5.5" fill="#d8976c" stroke="#13271f" stroke-width="2.4" />
+
+              <!-- Head Base -->
+              <rect x="36" y="30" width="48" height="49" rx="23" fill="#e0a177" stroke="#13271f" stroke-width="2.6" />
+
+              <!-- Friendly Stubble / Beard Shadow & Smile -->
+              <path
+                d="M39 60 C39 74, 50 79, 60 79 C70 79, 81 74, 81 60 C79 68, 72 73, 60 73 C48 73, 41 68, 39 60 Z"
+                fill="#1f2937"
+                opacity="0.22"
+              />
+              <!-- Big Warm Smile -->
+              <path d="M51 64 Q60 72 69 64 Z" fill="#fffdf8" stroke="#13271f" stroke-width="2.2" stroke-linejoin="round" />
+
+              <!-- Eyes & Eyebrows (Shift Left for Side A, Right for Side B) -->
+              <g class="char-eyes">
+                <!-- Eyebrows -->
+                <path d="M44 46 Q49 43 54 46" fill="none" stroke="#13271f" stroke-width="2.4" stroke-linecap="round" />
+                <path d="M66 46 Q71 43 76 46" fill="none" stroke="#13271f" stroke-width="2.4" stroke-linecap="round" />
+                <!-- Pupils -->
+                <circle cx="49" cy="53" r="3.4" fill="#13271f" />
+                <circle cx="71" cy="53" r="3.4" fill="#13271f" />
+                <!-- Eye Sparkles -->
+                <circle cx="47.8" cy="51.8" r="1.2" fill="#ffffff" />
+                <circle cx="69.8" cy="51.8" r="1.2" fill="#ffffff" />
+                <!-- Nose -->
+                <path d="M60 52 L58 58 L61 59" fill="none" stroke="#13271f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+
+              <!-- Wavy Dark Hair (Adnan's Signature Hair) -->
+              <path
+                d="M34 46 C31 32, 41 21, 53 22 C58 17, 71 18, 77 24 C86 24, 90 35, 86 46 C83 37, 76 34, 68 35 C61 31, 51 32, 45 36 C39 36, 36 40, 34 46 Z"
+                fill="#17212b"
+                stroke="#13271f"
+                stroke-width="2.4"
+                stroke-linejoin="round"
+              />
+              <!-- Extra Curls on Top -->
+              <path d="M48 26 Q55 19 63 26 Q70 20 76 28" fill="none" stroke="#13271f" stroke-width="2.4" stroke-linecap="round" />
+
+              <!-- ============================================================
+                   ENGINEER HEAD GEAR: Smart QA Glasses + Headset + Code Bubble
+                   ============================================================ -->
+              <g class="gear-engineer">
+                <!-- Headset Arch & Earcup -->
+                <path d="M32 54 C30 22, 90 22, 88 54" fill="none" stroke="#126fe8" stroke-width="3.2" stroke-linecap="round" />
+                <rect x="28" y="48" width="7" height="15" rx="3.5" fill="#d9f776" stroke="#13271f" stroke-width="2.2" />
+                <rect x="85" y="48" width="7" height="15" rx="3.5" fill="#d9f776" stroke="#13271f" stroke-width="2.2" />
+                <!-- Headset Boom Mic -->
+                <path d="M32 61 Q38 71 49 69" fill="none" stroke="#13271f" stroke-width="2.2" stroke-linecap="round" />
+                <circle cx="50" cy="69" r="2.5" fill="#126fe8" stroke="#13271f" stroke-width="1.5" />
+
+                <!-- Cyber / QA Glasses -->
+                <rect x="40" y="47" width="17" height="12" rx="3.5" fill="#38bdf8" fill-opacity="0.38" stroke="#13271f" stroke-width="2.4" />
+                <rect x="63" y="47" width="17" height="12" rx="3.5" fill="#38bdf8" fill-opacity="0.38" stroke="#13271f" stroke-width="2.4" />
+                <line x1="57" y1="52" x2="63" y2="52" stroke="#13271f" stroke-width="2.4" />
+                <line x1="43" y1="50" x2="47" y2="56" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
+                <line x1="66" y1="50" x2="70" y2="56" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
+
+                <!-- Floating Code Chip on Left -->
+                <rect x="4" y="16" width="32" height="16" rx="5" fill="#d9f776" stroke="#13271f" stroke-width="2" transform="rotate(-8 20 24)" />
+                <text x="10" y="27" fill="#13271f" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="800" transform="rotate(-8 20 24)">&lt;/&gt;</text>
+              </g>
+
+              <!-- ============================================================
+                   TRAVELER HEAD GEAR: Explorer Sun Hat + Compass Bubble
+                   ============================================================ -->
+              <g class="gear-traveler">
+                <!-- Explorer Bucket / Safari Hat Crown -->
+                <path
+                  d="M36 30 L42 12 C44 8, 76 8, 78 12 L84 30 Z"
+                  fill="#fbbf24"
+                  stroke="#13271f"
+                  stroke-width="2.4"
+                  stroke-linejoin="round"
+                />
+                <!-- Hat Band -->
+                <path d="M37 26 H83 L84 30 H36 Z" fill="#f26444" stroke="#13271f" stroke-width="2" />
+                <!-- Front Hat Brim -->
+                <path d="M20 30 Q60 37 100 30 Q60 25 20 30 Z" fill="#f59e0b" stroke="#13271f" stroke-width="2.4" />
+
+                <!-- Floating Plane / Compass Badge on Right -->
+                <circle cx="102" cy="24" r="12" fill="#fffdf8" stroke="#13271f" stroke-width="2" />
+                <polygon points="102,15 105,24 102,33 99,24" fill="#f26444" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Tactile Switch Icon Button right beside the Avatar -->
+          <button
+            class="avatar-switch-btn"
+            id="avatar-switch-btn"
+            type="button"
+            aria-label="Switch character outfit and highlight between Portfolio and Travel Blog"
+            title="Tap to switch side &amp; preview transition"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17 2l4 4-4 4" />
+              <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
+              <path d="M7 22l-4-4 4-4" />
+              <path d="M21 13v1a4 4 0 0 1-4 4H3" />
+            </svg>
+          </button>
+        </div>
+
+        <h1 class="intro-title">
+          Which side of me are you here to <em>explore today?</em>
+        </h1>
+      </div>
+
+      <!-- THE TWO PORTAL CARDS -->
+      <div class="portal-grid">
+        <!-- ────────────────────────────────────────────────────────────
+             SIDE A: PROFESSIONAL PORTFOLIO (adnanabir.com)
+             ──────────────────────────────────────────────────────────── -->
+        <a
+          class="portal-card side-eng"
+          id="card-eng"
+          href="https://adnanabir.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Adnan Abir's Professional Portfolio at adnanabir.com"
+        >
+          <div>
+            <div class="portal-meta">
+              <span class="side-pill">💻 Side A · Career &amp; Tech</span>
+              <span class="domain-label">adnanabir.com ↗</span>
+            </div>
+
+            <!-- Clean Hand-Drawn Illustration: Laptop, Code & QA Magnifier -->
+            <div class="portal-sketch" aria-hidden="true">
+              <svg class="sketch-svg" viewBox="0 0 300 135">
+                <!-- Hand-drawn Laptop -->
+                <rect x="72" y="20" width="136" height="82" rx="8" fill="#fffdf8" stroke="#13271f" stroke-width="2.5" />
+                <rect x="80" y="28" width="120" height="62" rx="4" fill="#dbeafe" stroke="#13271f" stroke-width="1.8" />
+                <path d="M54 102 H226 L236 113 H44 Z" fill="#d9f776" stroke="#13271f" stroke-width="2.5" stroke-linejoin="round" />
+
+                <!-- Terminal dots & code lines -->
+                <circle cx="89" cy="36" r="2.5" fill="#f26444" />
+                <circle cx="97" cy="36" r="2.5" fill="#ffbe3b" />
+                <circle cx="105" cy="36" r="2.5" fill="#16a34a" />
+                <line x1="88" y1="48" x2="142" y2="48" stroke="#126fe8" stroke-width="3" stroke-linecap="round" />
+                <line x1="88" y1="58" x2="174" y2="58" stroke="#13271f" stroke-width="2.4" stroke-linecap="round" />
+                <line x1="96" y1="68" x2="158" y2="68" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" />
+                <text x="88" y="82" fill="#16a34a" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="700">✓ QA: 100% PASS</text>
+
+                <!-- AI Node Badge on Left -->
+                <g class="float-on-hover">
+                  <circle cx="34" cy="54" r="14" fill="#d9f776" stroke="#13271f" stroke-width="2.2" />
+                  <text x="27" y="58" fill="#13271f" font-family="JetBrains Mono, monospace" font-size="10" font-weight="800">AI</text>
+                </g>
+
+                <!-- QA Magnifying Glass & Cute Bug on Right -->
+                <g class="float-on-hover">
+                  <circle cx="246" cy="60" r="22" fill="#fffdf8" stroke="#126fe8" stroke-width="3" />
+                  <line x1="262" y1="76" x2="282" y2="96" stroke="#13271f" stroke-width="4.5" stroke-linecap="round" />
+                  <ellipse cx="246" cy="61" rx="7" ry="9" fill="#f26444" stroke="#13271f" stroke-width="2" />
+                  <line x1="246" y1="52" x2="246" y2="70" stroke="#13271f" stroke-width="1.6" />
+                  <path d="M239 57 L234 54 M239 61 L233 61 M239 65 L234 68" stroke="#13271f" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M253 57 L258 54 M253 61 L259 61 M253 65 L258 68" stroke="#13271f" stroke-width="1.6" stroke-linecap="round" />
+                </g>
+              </svg>
+            </div>
+
+            <h2 class="portal-title">
+              Software QA &amp; <em>Applied AI</em>
+            </h2>
+
+            <p class="portal-desc">
+              My professional portfolio. Software QA at <strong>BlackBerry</strong>, Infotronics Engineering student, building local AI tools &amp; Python automation.
+            </p>
+
+            <div class="portal-tags">
+              <span class="tag-chip">Software QA</span>
+              <span class="tag-chip">Applied AI &amp; LLMs</span>
+              <span class="tag-chip">Projects &amp; CV</span>
+            </div>
+          </div>
+
+          <div class="portal-cta">
+            <span>Enter Portfolio</span>
+            <span class="cta-arrow">adnanabir.com →</span>
+          </div>
+        </a>
+
+        <!-- ────────────────────────────────────────────────────────────
+             SIDE B: TRAVEL & PERSONAL BLOG (thebrokenbackpack.com)
+             ──────────────────────────────────────────────────────────── -->
+        <a
+          class="portal-card side-trv"
+          id="card-trv"
+          href="https://www.thebrokenbackpack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open The Broken Backpack Travel Blog at thebrokenbackpack.com"
+        >
+          <div>
+            <div class="portal-meta">
+              <span class="side-pill">🎒 Side B · Travel &amp; Life</span>
+              <span class="domain-label">thebrokenbackpack.com ↗</span>
+            </div>
+
+            <!-- Clean Hand-Drawn Illustration: Broken Backpack, Mountains, Plane & Compass -->
+            <div class="portal-sketch" aria-hidden="true">
+              <svg class="sketch-svg" viewBox="0 0 300 135">
+                <!-- Sun & Mountains on Left -->
+                <circle cx="44" cy="42" r="12" fill="#ffbe3b" stroke="#13271f" stroke-width="2.2" />
+                <path d="M14 110 L46 58 L76 110 Z" fill="#fffdf8" stroke="#13271f" stroke-width="2.3" stroke-linejoin="round" />
+                <path d="M54 110 L82 68 L108 110 Z" fill="#ece6d6" stroke="#13271f" stroke-width="2.3" stroke-linejoin="round" />
+
+                <!-- Center: The Stitched "Broken" Backpack -->
+                <g class="float-on-hover">
+                  <path d="M134 26 C134 15, 166 15, 166 26" fill="none" stroke="#13271f" stroke-width="2.8" stroke-linecap="round" />
+                  <rect x="114" y="26" width="72" height="82" rx="20" fill="#f26444" stroke="#13271f" stroke-width="2.6" />
+                  <path d="M114 45 Q150 61 186 45 L186 38 Q186 26 172 26 H128 Q114 26 114 38 Z" fill="#ffbe3b" stroke="#13271f" stroke-width="2.4" />
+                  <rect x="126" y="64" width="48" height="32" rx="9" fill="#fffdf8" stroke="#13271f" stroke-width="2.2" />
+                  <!-- Cute stitch marks -->
+                  <path d="M134 74 L141 81 M141 74 L134 81 M145 74 L152 81 M152 74 L145 81" stroke="#126fe8" stroke-width="2" stroke-linecap="round" />
+                  <rect x="146" y="45" width="8" height="13" rx="2" fill="#fffdf8" stroke="#13271f" stroke-width="2" />
+                </g>
+
+                <!-- Paper Airplane Trail -->
+                <path d="M192 42 Q 224 22, 256 38" fill="none" stroke="#13271f" stroke-width="2" stroke-dasharray="4 4" />
+                <polygon points="260,38 242,30 247,39 242,46" fill="#d9f776" stroke="#13271f" stroke-width="1.8" stroke-linejoin="round" />
+
+                <!-- Explorer Compass on Right -->
+                <circle cx="252" cy="82" r="22" fill="#fffdf8" stroke="#13271f" stroke-width="2.5" />
+                <g class="spin-on-hover" style="transform-origin: 252px 82px;">
+                  <polygon points="252,66 257,82 252,98 247,82" fill="#f26444" stroke="#13271f" stroke-width="1.4" />
+                  <circle cx="252" cy="82" r="3" fill="#ffbe3b" stroke="#13271f" stroke-width="1.5" />
+                </g>
+              </svg>
+            </div>
+
+            <h2 class="portal-title">
+              The Broken <em>Backpack</em>
+            </h2>
+
+            <p class="portal-desc">
+              My personal &amp; travel blog. Stories from getting lost across Europe, city guides, student life in Germany, and YouTube vlogs.
+            </p>
+
+            <div class="portal-tags">
+              <span class="tag-chip">Travel Stories</span>
+              <span class="tag-chip">Europe Guides</span>
+              <span class="tag-chip">YouTube Vlogs</span>
+            </div>
+          </div>
+
+          <div class="portal-cta">
+            <span>Open Travel Blog</span>
+            <span class="cta-arrow">thebrokenbackpack.com →</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- ==================================================================
+         3. QUIET MINIMAL FOOTER
+         ================================================================== -->
+    <footer class="minimal-footer">
+      <div class="social-links" aria-label="Social links">
+        <a href="https://www.instagram.com/adnan_auric/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <span>·</span>
+        <a href="https://github.com/adnanauric" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/md-adnan-abir/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>·</span>
+        <a href="https://www.youtube.com/@TheBrokenBackpack" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+
+      <span>Adnan Abir © 2026</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Link copied to clipboard!</div>
+
+  <script src="/lobby/app.js"></script>
+</body>
+</html>
