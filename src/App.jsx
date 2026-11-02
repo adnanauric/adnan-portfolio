@@ -104,7 +104,13 @@ function Header() {
     <>
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <a className="brand" href="/#top" onClick={close} aria-label="Adnan Abir — home">
-          <span className="brand-word"><em>A</em>dnan</span>
+          <span className="identity-monogram" aria-hidden="true">
+            <img src="/images/monogram.png" alt="" width="1280" height="1280" />
+          </span>
+          <div className="identity-copy">
+            <small>Portfolio of</small>
+            <h1 id="profile-name">{profile.fullName}</h1>
+          </div>
         </a>
 
         <nav className="site-nav desktop-nav" aria-label="Main navigation">
@@ -146,7 +152,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="hero" id="top" aria-labelledby="profile-name">
+    <section className="hero" id="top" aria-labelledby="hero-title">
       <video className="hero-video" autoPlay muted loop playsInline poster="/images/hero-poster.jpg" aria-hidden="true">
         <source src="/video/hero.webm" type="video/webm" />
         <source src="/video/hero.mp4" type="video/mp4" />
@@ -155,15 +161,6 @@ function Hero() {
       <div className="hero-grid" aria-hidden="true" />
 
       <div className="hero-content">
-        <div className="hero-identity" aria-label={`Portfolio of ${profile.fullName}`}>
-          <span className="identity-monogram" aria-hidden="true">
-            <img src="/images/monogram.png" alt="" width="1280" height="1280" />
-          </span>
-          <div className="identity-copy">
-            <small>Portfolio of</small>
-            <h1 id="profile-name">{profile.fullName}</h1>
-          </div>
-        </div>
         <h2 className="hero-heading" id="hero-title">
           <span className="hero-title-role">Software <span className="hero-title-accent">QA</span> Engineer</span>
           <span className="hero-title-study">&amp; <em>Infotronic Systems</em><br />Engineering Student</span>
